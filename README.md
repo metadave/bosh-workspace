@@ -13,16 +13,19 @@ Have some sort of `Gemfile` to specify the del
 ## Installation
 
 Add this line to your application's Gemfile:
-
-    gem 'bosh-manifests'
+```
+gem 'bosh-manifests'
+```
 
 And then execute:
-
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
-
-    $ gem install bosh-manifests
+```
+$ gem install bosh-manifests
+```
 
 ## Usage
 
@@ -35,3 +38,23 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## To Be Implmeneted:
+
+```
+bosh deployment
+1) Prod2
+2) Prod3
+
+bosh deployment deployment/prod2.yml
+# Deployment set to prod2.yml
+# By using .deployment/prod2.yml
+
+bosh prepare deployment
+# resolve external templates
+# build manifest
+# resolve/upload stemcell
+# resolve/upload release
+
+bosh deploy
+```
