@@ -24,6 +24,15 @@ module Bosh::Cli::Command
       say("Manifest build succesfull: '#{result_path}'")
     end
 
+    # Hack to unregister original deployment command
+    Bosh::Cli::Config.instance_eval("@commands.delete('deployment')")
+
+    usage "deployment"
+    desc "Get/set current deployment"
+    def deployment(name=nil)
+      say("test")
+    end
+
     private
 
     def setup_manifest_manager
